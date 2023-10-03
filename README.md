@@ -6,13 +6,15 @@ Simple implementation of Physics Informed Neural Networks for some systems of hy
 
 ## Currently implemented systems:
 - ### 1D Inviscid Burgers' equation
-  ![Burgers](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/a8777f6d-e9f6-41b5-818c-4adafba9969c)
+  ![Burgers](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/dc930538-bc51-425f-9729-09895025e0f4)
+
 - ### 1D Shallow Water Equations with flat bottom
     - Entropy solution
-      ![SWEs2](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/9e807cfc-1c72-4bc1-aa73-c84ffb8e68dd)
+      ![SWEs2](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/9a0f7f2d-4708-479b-b58e-1c36bfc7b03c)
 
     - Entropy violating solution
-      ![SWEs](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/80fb3791-026d-42cf-b5d9-575960bab068)
+      ![SWEs](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/e196789a-f57b-490c-b9b2-036ca25b0624)
+
 
 
 -------------------------------------------
