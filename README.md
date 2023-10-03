@@ -5,6 +5,17 @@ Simple implementation of Physics Informed Neural Networks for some systems of hy
 - 1D Inviscid Burgers' equation
 - 1D Shallow Water Equations with flat bottom
 
+-------------------------------------------
+## Requirements
+python (Tested on 3.9.12)
+numpy 
+matplotlib
+pytorch
+pyDOE
+scipy
+Jupyer Notebook
+CLAWPACK (If you want to set up a custom problem, otherwise data is provided for each system)
+
 
 -------------------------------------------
 ## Attributes
