@@ -4,7 +4,7 @@ Simple implementation of Physics Informed Neural Networks for some systems of hy
 
 -------------------------------------------
 
-## Currently implemented systems:
+## Currently implemented systems
 - ### 1D Inviscid Burgers' equation
   ![Burgers](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/dc930538-bc51-425f-9729-09895025e0f4)
 
