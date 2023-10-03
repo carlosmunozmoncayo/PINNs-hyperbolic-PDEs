@@ -7,14 +7,15 @@ Simple implementation of Physics Informed Neural Networks for some systems of hy
 
 -------------------------------------------
 ## Requirements
-python (Tested on 3.9.12)
-numpy 
-matplotlib
-pytorch
-pyDOE
-scipy
-Jupyer Notebook
-CLAWPACK (If you want to set up a custom problem, otherwise data is provided for each system)
+My specific setup is provided in the file **requirements.txt**, but the following Python libraries are required
+- NumPy 
+- Matplotlib
+- PyTorch
+- pyDOE
+- scipy
+- Jupyter Notebook
+- CLAWPACK (If you want to set up a custom problem, data is provided for each system otherwise)
+
 
 
 -------------------------------------------
