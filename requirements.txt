@@ -1,0 +1,12 @@
+ipykernel==6.25.2
+ipython==8.16.0
+ipywidgets==8.1.1
+matplotlib==3.8.0
+matplotlib-inline==0.1.6
+numpy==1.26.0
+pandas==2.1.1
+pyDOE==0.3.8
+sympy==1.12
+torch==2.0.1
+tqdm==4.66.1
+-e git+git://github.com/clawpack/clawpack.git@d619d6835ce128a0421aa52d70d2a6c9d9d1ce93#egg=clawpack
