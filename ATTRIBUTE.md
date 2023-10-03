@@ -42,3 +42,27 @@ http://www.clawpack.org, doi: 10.5281/zenodo.4025432  (Coyright notice preserved
     year={2016},
     publisher={PeerJ Inc.},
     doi={10.7717/peerj-cs.68} }
+
+## Shock capturing
+
+A simple gradient-based shock-capturing technique is used following the ideas of Li Liu et al. (2022).
+@article{liu2022discontinuity,
+  title={Discontinuity Computing using Physics-Informed Neural Network},
+  author={Liu, Li and Liu, Shengping and Xie, Hui and Xiong, Fansheng and Yu, Tengchao and Xiao, Mengjuan and Liu, Lufeng and Yong, Heng},
+  journal={arXiv preprint arXiv:2206.03864},
+  year={2022}
+}
+
+## Some ideas for the future
+Enforcing conservative, TVD, and entropy-satisfying solutions, as attempted, e.g., by Patel et al. (2022).
+@article{patel2022thermodynamically,
+  title={Thermodynamically consistent physics-informed neural networks for hyperbolic systems},
+  author={Patel, Ravi G and Manickam, Indu and Trask, Nathaniel A and Wood, Mitchell A and Lee, Myoungkyu and Tomas, Ignacio and Cyr, Eric C},
+  journal={Journal of Computational Physics},
+  volume={449},
+  pages={110754},
+  year={2022},
+  publisher={Elsevier}
+}
+
+
