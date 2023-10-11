@@ -10,7 +10,7 @@ def generate_claw():
 def construct_data_dictionaries(claw):
     frames = claw.frames
     data_dict = {}
-    data_dict["x"] = (claw.frames[0].state.grid.x.centers).reshape(-1,1)
+    data_dict["x"] = (frames[0].state.grid.x.centers).reshape(-1,1)
     t_list = []
     usol_list = []
     for i in range(len(frames)):

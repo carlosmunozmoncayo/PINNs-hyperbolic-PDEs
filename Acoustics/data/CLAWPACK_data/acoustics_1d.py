@@ -20,12 +20,14 @@ crossed the domain exactly once.
 """
 from __future__ import absolute_import
 from numpy import sqrt, exp, cos
+import numpy as np
 from clawpack import riemann
 
 
 def setup(use_petsc=False, kernel_language='Fortran', solver_type='sharpclaw',
           outdir='./_output', ptwise=False, weno_order=5,
-          time_integrator='SSP104', disable_output=False, output_style=1, nout=100):
+          time_integrator='SSP104', disable_output=False, output_style=1, 
+          xlb=-10., xub=10., tfinal=30., nout=100):
 
     if use_petsc:
         import clawpack.petclaw as pyclaw
@@ -50,7 +52,7 @@ def setup(use_petsc=False, kernel_language='Fortran', solver_type='sharpclaw',
 
     solver.kernel_language = kernel_language
 
-    x = pyclaw.Dimension(-5.0, 5.0, 2000, name='x')
+    x = pyclaw.Dimension(xlb, xub, 2000, name='x')
     domain = pyclaw.Domain(x)
     num_eqn = 2
     num_aux = 5
@@ -70,8 +72,8 @@ def setup(use_petsc=False, kernel_language='Fortran', solver_type='sharpclaw',
 
 
 
-    list_bulks = [1.,0.5,1.,1.]
-    list_rhos = [1.,2.,1.,6.]
+    list_bulks = [1.,0.5,1.,1.]#[1.,4.]
+    list_rhos = [1.,2.,1.,6.]#[1.,1.]
     list_impedances = [sqrt(rho*bulk) for rho,bulk in zip(list_rhos,list_bulks)]
     list_soundspeeds = [sqrt(bulk/rho) for rho,bulk in zip(list_rhos,list_bulks)]
     print(f"List of impedances: {list_impedances}")
@@ -122,13 +124,13 @@ def setup(use_petsc=False, kernel_language='Fortran', solver_type='sharpclaw',
     print(f"Bulks: {state.aux[3,state.aux[3,:]<1e9]}")
     print(f"Densities: {state.aux[4,state.aux[4,:]<1e9]}")
 
-    beta = 4.
+    beta = 2.
     gamma = 0
     delta_interface = interfaces_x[0]-xc[0]
     x0 = (interfaces_x[0]+xc[0])/2.
 
-    state.q[0, :] = exp(-beta * (xc-x0)**2)*(xc<interfaces_x[0]) #* cos(gamma * (xc - x0))
-    state.q[1, :] = state.q[0, :]/list_impedances[0]
+    state.q[0, :] = np.cos(xc)#exp(-beta * (xc-x0)**2)*(xc<interfaces_x[0]) #* cos(gamma * (xc - x0))
+    state.q[1, :] = state.q[0, :]#/list_impedances[0]
 
 
     solver.dt_initial = domain.grid.delta[0]*0.1# / state.problem_data['cc'] * 0.1
@@ -138,16 +140,11 @@ def setup(use_petsc=False, kernel_language='Fortran', solver_type='sharpclaw',
     claw.solver = solver
     claw.outdir = outdir
     claw.output_style = output_style
-    if output_style == 1:
-        claw.tfinal = 10.0
-        claw.num_output_times = nout
-    elif output_style == 3:
-        claw.nstep = 1
-        claw.num_output_times = nout
     claw.keep_copy = True
-    if disable_output:
-        claw.output_format = None
-    claw.setplot = setplot
+    
+    claw.tfinal = tfinal
+    claw.num_output_times = nout
+   
 
     return claw
 
