@@ -15,12 +15,21 @@ Simple implementation of Physics Informed Neural Networks for some systems of hy
     - Entropy violating solution
       ![SWEs](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/e196789a-f57b-490c-b9b2-036ca25b0624)
 
-- ### 1D Acoustics with variable coeffients
-    - Piecewise constant medium, 2 materials
+- ### 1D Acoustics with variable coefficients
+    - Forward problem 2 homogeneous materials
       ![Acoustics_forward_2_materials](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/6d10ed05-451f-4e98-bd55-b6147fede0e4)
 
-    - Piecewise constant medium, 4 materials
+    - Forward problem 4 homogeneous materials with few collocation points and just providing initial and boundary data
       ![Acoustics_forward_4_materials](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/ad581f5f-a558-4ba8-98ac-d1b381908ced)
+
+    - Forward problem 4 homogeneous materials with more collocation points and some data at the interior of the domain.
+      ![image](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/b6b0dce8-fbc9-4ab2-af14-3abe1cdfc84a)
+
+    - Inverse problem 2 homogeneous materials providing some data at the interior of the domain
+      ![image](https://github.com/carlosmunozmoncayo/PINNs-hyperbolic-PDEs/assets/29715468/b93fb13c-2bc8-44fe-9425-d3b5d96ab6f3)
+
+  
+
 
 
 -------------------------------------------
